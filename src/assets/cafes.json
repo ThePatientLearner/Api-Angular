@@ -15,7 +15,7 @@
           "sabor": "dulce y afrutado",
           "cafeina": 0.4,
           "ingredientes": ["espresso", "leche", "jarabe de fresa", "polvo de macaron"],
-          "imagen": "assets/cafesImg/parismacaron.jpeg"
+          "imagen": "assets/cafesImg/Parismacaron.jpeg"
         }
       ]
     },
@@ -35,7 +35,7 @@
           "sabor": "herbáceo y cremoso",
           "cafeina": 0.3,
           "ingredientes": ["espresso", "leche", "polvo de matcha", "jarabe de vainilla"],
-          "imagen": "assets/cafesImg/japonmatcha.jpeg"
+          "imagen": "assets/cafesImg/japonmatch.jpeg"
         }
       ]
     },

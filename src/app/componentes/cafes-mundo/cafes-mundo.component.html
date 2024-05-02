@@ -1,9 +1,29 @@
 <app-nav></app-nav>
 
 @if(cafeteria){
+<div class="row my-3 justify-content-center text-center">
+    @for( cf of cafeteria; track $index){
 
-<p>{{cafeteria[0].ciudad}}</p>
-<img [src]= "cafeteria[0].cafes[0].imagen" alt="NO SE PUDO CARGAR IMAGENs">
+    <h2 class="text-white">{{ cf.cafeteria }}</h2>
+    <p class="text-white">Ciudad: {{ cf.ciudad }}</p>
+
+    @for( cafe of cf.cafes; track $index){
+    <div class="col-3 my-3">
+
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" [src]="cafe.imagen" alt="Imagen de {{ cafe.nombre }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ cafe.nombre }}</h5>
+                <p class="card-text">Sabor: {{ cafe.sabor }}</p>
+                <p class="card-text">Cafeína: {{ cafe.cafeina }}</p>
+                <p class="card-text">Ingredientes: {{ cafe.ingredientes.join(', ') }}</p> <!--devuelve los ingredientes separados por coma-->
+                <a href="#" class="btn btn-primary">Ver más</a>
+            </div>
+        </div>
+    </div>
+    }
 
 
+    }
+</div>
 }
