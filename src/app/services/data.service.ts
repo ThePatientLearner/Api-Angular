@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Cafeterias } from '../common/cafeterias';
+import { TCafe } from '../common/t-cafe';
 
 
 @Injectable({
@@ -17,10 +18,16 @@ export class DataService { // crearemos un servicio DataService para poder hacer
 
     return this.http.get<Cafeterias[]>("assets/cafes.json"); 
     // usa la instancia metida por el constructor tipo HttpClient para hacer una llamada a la api con el método get y retornar un observable de tipo Cafeterias.
+  }
 
+  getTiposCafe():Observable<TCafe[]>{
+    return this.http.get<TCafe[]>("https://api.sampleapis.com/coffee/hot")
+  }
+  getCafe(id:number):Observable<TCafe>{
+    return this.http.get<TCafe>("https://api.sampleapis.com/coffee/hot/"+id)
+  }
 
 
 }
 
 
-}

@@ -10,14 +10,14 @@
     @for( cafe of cf.cafes; track $index){
     <div class="col-3 my-3">
 
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" [src]="cafe.imagen" alt="Imagen de {{ cafe.nombre }}">
+        <div  class="card" style="width: 18rem;">
+            <img  id="imagenCafe" class="card-img-top" [src]="cafe.imagen" alt="Imagen de {{ cafe.nombre }}">
             <div class="card-body">
                 <h5 class="card-title">{{ cafe.nombre }}</h5>
                 <p class="card-text">Sabor: {{ cafe.sabor }}</p>
                 <p class="card-text">Cafeína: {{ cafe.cafeina }}</p>
-                <p class="card-text">Ingredientes: {{ cafe.ingredientes.join(', ') }}</p> <!--devuelve los ingredientes separados por coma-->
-                <a href="#" class="btn btn-primary">Ver más</a>
+                <p id="x" class="card-text">Ingredientes: {{ cafe.ingredientes.join(', ') }}</p> <!--devuelve los ingredientes separados por coma-->
+                <!--<a href="#" class="btn btn-primary">Ver más</a> POR SI LUEGO QUIERO UN BOTÓN>-->
             </div>
         </div>
     </div>

@@ -1,0 +1,17 @@
+<app-nav></app-nav>
+@if (cafe) {
+    <div class="card my-5">
+        <div class="row g-0 align-items-center">
+            <div class="col-md-4">
+                <img id="imagenCafe" class="img-fluid rounded-start" [src]="cafe.image" alt="Imagen de {{ cafe.title }}">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body text-center">
+                    <h2 class="card-title">{{  cafe.title }}</h2>
+                    <p class="card-text">{{ cafe.description  }}</p>
+                    <p id="x" class="card-text">Ingredientes: {{ cafe.ingredients.join(', ') }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    }

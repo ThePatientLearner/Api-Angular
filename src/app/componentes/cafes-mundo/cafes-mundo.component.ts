@@ -21,7 +21,7 @@ export class CafesMundoComponent {
   }
 
   private cargarCafesMundo() {
-    this.data.getCafeterias().subscribe({ // se ejecutara al llamar a la funcion getCafeterias y recogerá los datos de la api
+    this.data.getCafeterias().subscribe({ // se ejecutara al llamar a la funcion getCafeterias y recogerá los datos de la api. suscribe es un metodo de un observable
       next: (datos: Cafeterias[]) => { // si se ejecuta correctamente le decimos que recibe un parametro tipo Cafeterias llamado datos.
         this.cafeteria = datos; // asi esta variable la cargará y la mete en cafesmundo, que la habiamos creado previamente.
       },
