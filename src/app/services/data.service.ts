@@ -27,6 +27,10 @@ export class DataService { // crearemos un servicio DataService para poder hacer
     return this.http.get<TCafe>("https://api.sampleapis.com/coffee/hot/"+id)
   }
 
+  getCafeTraducido():Observable<TCafe[]>{
+    return this.http.get<TCafe[]>("assets/cafesTraduccion.json")
+  }
+
 
 }
 

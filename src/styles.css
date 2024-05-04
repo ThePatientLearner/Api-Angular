@@ -1,7 +1,16 @@
 @charset "UTF-8";
 
 #imagenCafe{
-  width: 500px;
+  width: 300px ;
+}
+
+a{
+  text-decoration: none !important;
+}
+
+#cardTitle{
+  text-align: center;
+  text-decoration: none !important;
 }
 
 :root {
