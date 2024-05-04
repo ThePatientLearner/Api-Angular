@@ -5,6 +5,8 @@ export interface Cafeterias {
     cafeteria: string
     ciudad: string
     cafes: Cafe[]
+    id: number
+    
 
 }
 

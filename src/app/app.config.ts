@@ -1,7 +1,5 @@
 import { ApplicationConfig } from '@angular/core';
 import { provideRouter } from '@angular/router';
-import { TranslateModule,TranslateLoader } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient } from '@angular/common/http';
 
 import { routes } from './app.routes';
@@ -17,9 +15,5 @@ export const appConfig: ApplicationConfig = {
   ]
 
 };
-
-export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
-}
 
 export class AppServerModule { }

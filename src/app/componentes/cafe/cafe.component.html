@@ -1,7 +1,9 @@
 <app-nav></app-nav>
 
 @if (cafe) {
+    
   @for( cafeTraducido of arrayCafes; track $index) {
+  
     @if(cafeTraducido.id == cafe.id) {
       <div class="row justify-content-center">
         <div class="col-md-9">
@@ -25,4 +27,5 @@
       </div>
     }
   }
+  
 }

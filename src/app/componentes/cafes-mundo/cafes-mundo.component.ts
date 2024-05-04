@@ -2,6 +2,9 @@ import { Component, inject } from '@angular/core';
 import { NavComponent } from '../../layout/nav/nav.component';
 import { Cafeterias } from '../../common/cafeterias';
 import { DataService } from '../../services/data.service';
+import { TiempoReal } from '../../common/tiempo-real';
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-cafes-mundo',
@@ -14,10 +17,13 @@ export class CafesMundoComponent {
   Cafeteria: any[] = []; //Cafeteria es un array de tipo any y lo inicializamos con la ! para especificar que esta vacio y lo llena con el loadEquipo
 
   cafeteria!: Cafeterias[];  //cafesMundo es de tipo Cafeterias y lo inicializamos con la ! para especificar que está vacio y lo llenamos después con el loadEquipo
+  tiempoReal!: TiempoReal[];
   private data: DataService = inject(DataService);
+  contador: number = 0;
 
   constructor() {
  this.cargarCafesMundo();
+ this.cargarTiempoReal();
   }
 
   private cargarCafesMundo() {
@@ -33,6 +39,24 @@ export class CafesMundoComponent {
       complete: () => {
         console.log("Cafeterias cargadas"); // si es exitoso nos saltará esto en consola
       }
+
+      
     });
   }
+
+  public cargarTiempoReal(){
+    this.data.getTiempoReal().subscribe({
+      next: (data: TiempoReal[]) => {
+        this.tiempoReal = data;
+      },
+      error: (error) => {
+        console.log(error);
+      },
+      complete: () => {
+        console.log("Tiempo real cargado"); // si es exitoso nos saltará esto en consola
+      }
+    });
+  }
+
+
 }

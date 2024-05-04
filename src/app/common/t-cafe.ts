@@ -6,6 +6,7 @@ export interface TCafe {
   ingredients: string[]
   image: string
   id: number
+  
 }
 
 

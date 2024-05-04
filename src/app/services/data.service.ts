@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Cafeterias } from '../common/cafeterias';
 import { TCafe } from '../common/t-cafe';
+import { TiempoReal } from '../common/tiempo-real';
 
 
 @Injectable({
@@ -31,7 +32,8 @@ export class DataService { // crearemos un servicio DataService para poder hacer
     return this.http.get<TCafe[]>("assets/cafesTraduccion.json")
   }
 
-
+  getTiempoReal():Observable<TiempoReal[]>{
+    return this.http.get<TiempoReal[]>("https://api.open-meteo.com/v1/forecast?latitude=48.8534,35.6895,23,30.0626&longitude=2.3488,139.6917,-102,31.2497&current=temperature_2m,apparent_temperature,is_day,precipitation,rain,wind_speed_10m&hourly=precipitation_probability&timezone=auto&forecast_days=1")
 }
 
-
+}

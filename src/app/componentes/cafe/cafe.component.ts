@@ -62,6 +62,7 @@ export class CafeComponent {
     });
   }
 
+
   public cambiarCafe(id: number) {
     
     if (id > 0 && id < 21) {
@@ -69,5 +70,7 @@ export class CafeComponent {
     }
 
   }
+
+
 
 }

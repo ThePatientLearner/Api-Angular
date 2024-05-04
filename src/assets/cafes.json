@@ -17,7 +17,8 @@
           "ingredientes": ["espresso", "leche", "jarabe de fresa", "polvo de macaron"],
           "imagen": "assets/cafesImg/Parismacaron.jpeg"
         }
-      ]
+      ],
+      "id" : 0
     },
     {
       "cafeteria": "Café Nippon",
@@ -37,7 +38,8 @@
           "ingredientes": ["espresso", "leche", "polvo de matcha", "jarabe de vainilla"],
           "imagen": "assets/cafesImg/japonmatch.jpeg"
         }
-      ]
+      ],
+      "id" : 1
     },
     {
       "cafeteria": "Café Azteca",
@@ -57,7 +59,8 @@
           "ingredientes": ["espresso", "leche de arroz", "jarabe de canela", "extracto de vainilla"],
           "imagen": "assets/cafesImg/mexico2.jpeg"
         }
-      ]
+      ],
+      "id" : 2
     },
     {
       "cafeteria": "Café Cairo",
@@ -77,6 +80,7 @@
           "ingredientes": ["espresso", "leche", "jarabe de higo", "nuez moscada", "polvo de cacao"],
           "imagen": "assets/cafesImg/giptocairo.jpeg"
         }
-      ]
+      ],
+      "id" : 3
     }
   ]
